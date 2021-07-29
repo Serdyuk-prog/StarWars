@@ -1,0 +1,126 @@
+:root {
+  --suggestion-border: 1px solid #D8D8D8;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  background: url('../assets/background.jpg') no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  max-width: 100%;
+  min-height: 100vh;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+.form-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.search-form {
+  width: 800px;
+  margin: 0 50px;
+}
+
+.search {
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+  outline: 0;
+  border: 10px solid #F7F7F7;
+  position: relative;
+  top: 10px;
+  border-radius: 5px;
+  font-size: 40px;
+}
+
+.suggestions {
+  max-height: calc(100vh - 250px);
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  border-radius: 0 0 5px 5px;
+}
+
+.suggestions li {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  border-bottom: var(--suggestion-border);
+  margin: 0;
+  padding: 20px;
+  transition: background 0.2s;
+  background-color: white;
+  text-transform: capitalize;
+  align-items: center;
+}
+
+.suggestions li:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+.character-image {
+  width: 230px;
+  height: 320px;
+}
+
+#pagination {
+  display: block;
+  margin: 15px 50px;
+}
+
+#pagination button {
+  width: 25px;
+  height: 25px;
+
+  appearance: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  background-color: #44AAEE;
+
+  margin: 5px;
+  transition: 0.4s;
+
+  color: #FFF;
+  font-size: 10px;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+#pagination button:hover {
+  background-color: #44EEAA;
+}
+
+
+#pagination button.active {
+  background-color: #44EEAA;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+a {
+  align-self: flex-end;
+  text-decoration: none;
+  color: #F7F7F7;
+  font-size: 30px;
+  background-color: #44AAEE;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 10px 50px;
+}
+
+.fav:hover {
+  background-color: #44EEAA;;
+}
